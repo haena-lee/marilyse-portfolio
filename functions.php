@@ -129,6 +129,14 @@ function marilyse_portfolio_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	// enqueue lightbox on the portfolio page
+	// if (is_page('portfolio')){
+	// 	wp_enqueue_style( 'marilyse-portfolio-lightgallery-style', get_template_directory_uri() . '/styles/lightgallery.css', array(), '20180922' );
+	// 	wp_enqueue_script( 'marilyse-portfolio-lightgallery', get_template_directory_uri() . '/js/lightgallery.js', array('jquery'), '20180922', true );
+	// 	wp_enqueue_script( 'marilyse-portfolio-lightgallery-all', get_template_directory_uri() . '/js/lightgallery-all.js', array('jquery'), '20180922', true );
+	// }
+
 }
 add_action( 'wp_enqueue_scripts', 'marilyse_portfolio_scripts' );
 
