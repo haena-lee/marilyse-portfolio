@@ -120,6 +120,9 @@ add_action( 'widgets_init', 'marilyse_portfolio_widgets_init' );
  * Enqueue scripts and styles.
  */
 function marilyse_portfolio_scripts() {
+
+	wp_enqueue_style( 'marilyse-typekit', 'https://use.typekit.net/tum2meb.css' );
+
 	wp_enqueue_style( 'marilyse-portfolio-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'marilyse-portfolio-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

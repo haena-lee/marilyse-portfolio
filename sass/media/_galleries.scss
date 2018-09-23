@@ -19,3 +19,19 @@
 .gallery-caption {
 	display: block;
 }
+
+
+.rl-gallery-container {
+	max-width: 60%;
+	align-content: center;
+	margin: 50px auto;
+
+	.rl-gallery-item {
+		margin: 0 auto;
+
+		.rl-gallery-item-content a img {
+			margin: 0 auto;
+		}
+	}
+
+}

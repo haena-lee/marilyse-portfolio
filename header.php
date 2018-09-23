@@ -30,14 +30,19 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle">
-                <span class="bar bar-top"></span>
-                <span class="bar bar-middle"></span>
-                <span class="bar bar-bottom"></span>
-            </button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<?php //esc_html_e( 'Menu', 'marilyse-portfolio' ); ?>
+				<span class="bar bar-top"></span>
+				<span class="bar bar-middle"></span>
+				<span class="bar bar-bottom"></span>
+			</button>
 			<?php
-			wp_nav_menu();
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
 			?>
+		</nav><!-- #site-navigation -->
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 

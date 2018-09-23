@@ -132,7 +132,7 @@ template { display: none; }
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body, button, input, select, optgroup, textarea { color: #404040; font-family: sans-serif; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+body, button, input, select, optgroup, textarea { color: #404040; font-family: "semplicitapro", sans-serif; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 { clear: both; }
 
@@ -161,7 +161,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 *, *:before, *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */ -webkit-box-sizing: inherit; box-sizing: inherit; }
 
-body { background: pink; /* Fallback for when there is no custom background color defined. */ }
+body { background: #252525; /* Fallback for when there is no custom background color defined. */ }
 
 hr { background-color: #ccc; border: 0; height: 1px; margin-bottom: 1.5em; }
 
@@ -206,7 +206,7 @@ textarea { width: 100%; }
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a { color: red; }
+a { color: skyblue; }
 
 a:visited { color: purple; }
 
@@ -219,21 +219,52 @@ a:hover, a:active { outline: 0; }
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.home-container { position: relative; }
+.site-branding h1 { font-family: "semplicitapro", sans-serif; font-weight: 500; font-size: 26px; line-height: 40px; }
 
-header { position: absolute; top: 5px; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); z-index: 999; }
+.home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
 
-header .logo-text { margin: 0 auto; text-transform: uppercase; color: white; }
+.home-site-header .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; text-align: center; color: white; text-transform: uppercase; font-size: 14px; }
 
-.main-navigation { text-align: center; display: block; /* Small menu. */ }
+.home-site-header .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "semplicitapro", sans-serif; }
+
+.contact-site-header { background: url("images/contact_dark_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
+
+.contact-site-header .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; text-align: center; color: white; text-transform: uppercase; font-size: 14px; }
+
+.contact-site-header .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "semplicitapro", sans-serif; text-transform: uppercase; color: white; }
+
+.contact-site-main { position: absolute; top: 180px; left: 40px; }
+
+.contact-site-main .model-info-container { color: white; line-height: 5px; margin-bottom: 50px; }
+
+.contact-site-main .email-me { color: white; }
+
+.main-navigation.toggled ul li a { border-left: 2px solid transparent; }
+
+.main-navigation.toggled ul li a:hover { border-left: 2px solid white; }
+
+.site-header { position: relative; min-height: 120px; }
+
+.site-header .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; color: white; text-align: center; text-transform: uppercase; font-size: 14px; }
+
+.site-header .main-navigation { z-index: 999; position: absolute; top: 25px; }
+
+.main-navigation { clear: both; display: block; float: left; width: 100%; }
 
 .main-navigation ul { display: none; list-style: none; margin: 0; padding-left: 0; }
 
-.main-navigation ul a { display: block; text-decoration: none; }
+.main-navigation ul ul { -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2); float: left; position: absolute; top: 100%; left: -999em; z-index: 99999; }
 
-.main-navigation .menu-toggle, .main-navigation .main-navigation.toggled ul { display: block; }
+.main-navigation ul ul ul { left: -999em; top: 0; }
 
-.main-navigation .menu-toggle { background-color: transparent; border: none; width: 28px; height: 28px; z-index: 999; position: fixed; top: 12px; left: -40%; cursor: pointer; display: block; outline: none; }
+.main-navigation li:hover > ul, .main-navigation li.focus > ul { left: auto; }
+
+li { color: white; }
+
+a { display: block; text-decoration: none; }
+
+/* Small menu. */
+.main-navigation .menu-toggle { background-color: transparent; border: none; width: 28px; height: 28px; z-index: 999; position: absolute; top: 0px; left: 20px; cursor: pointer; display: block; color: white; }
 
 .main-navigation .menu-toggle .bar { display: block; position: absolute; left: 0; border-top: 3px solid white; width: 100%; -webkit-transition: 300ms; transition: 300ms; }
 
@@ -243,11 +274,42 @@ header .logo-text { margin: 0 auto; text-transform: uppercase; color: white; }
 
 .main-navigation .menu-toggle .bar-bottom { top: 20px; }
 
-@media screen and (min-width: 37.5em) { .main-navigation .menu-toggle { display: none; }
-  .main-navigation .main-navigation { display: block; }
-  .main-navigation .nav-menu { display: block; }
-  .main-navigation .main-navigation ul li a { color: pink; }
-  .main-navigation .menu-item ul a { color: white; display: block; padding-left: 30px; padding-right: 30px; } }
+.menu-toggle, .main-navigation.toggled ul { margin-left: 20px; display: block; }
+
+.menu-toggle:focus { outline: none; }
+
+.main-navigation.toggled { outline: none; }
+
+.main-navigation.toggled .bar-top { top: 10px; -webkit-transform: rotate(45deg); transform: rotate(45deg); }
+
+.main-navigation.toggled .bar-middle { opacity: 0; }
+
+.main-navigation.toggled .bar-bottom { top: 10px; -webkit-transform: rotate(135deg); transform: rotate(135deg); }
+
+.main-navigation.toggled ul { display: block; position: absolute; top: 50px; left: 0px; background-color: trasparent; }
+
+.main-navigation.toggled ul li a { display: block; color: white; margin-bottom: 10px; padding: 0 0 0 20px; }
+
+@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; }
+  .contact-site-main .model-info-container { color: white; line-height: 5px; margin-bottom: 50px; }
+  .contact-site-main .email-me { color: white; } }
+
+@media screen and (min-width: 730px) { .main-navigation .menu-toggle { display: none; }
+  .main-navigation ul { -webkit-margin-before: 0; margin-block-start: 0; -webkit-margin-after: 0; margin-block-end: 0; -webkit-padding-start: 0px; padding-inline-start: 0px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 50px auto; max-width: 60%; }
+  .main-navigation ul li a { text-align: center; padding-bottom: 5px; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; color: white; text-transform: uppercase; }
+  .main-navigation ul #menu-item-18 { margin-left: 22px; }
+  .contact-site-main { left: 20%; top: 30%; }
+  .site-branding h1 { font-size: 32px; } }
+
+@media screen and (min-width: 998px) { .home-site-header { min-height: 180vh; background-attachment: scroll; } }
+
+.site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation { margin: 0 0 1.5em; overflow: hidden; }
+
+.comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous { float: left; width: 50%; }
+
+.comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { float: right; text-align: right; width: 50%; }
+
+.site-info { text-align: center; color: white; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -361,5 +423,11 @@ embed, iframe, object { max-width: 100%; }
 .gallery-columns-9 .gallery-item { max-width: 11.11%; }
 
 .gallery-caption { display: block; }
+
+.rl-gallery-container { max-width: 60%; -ms-flex-line-pack: center; align-content: center; margin: 50px auto; }
+
+.rl-gallery-container .rl-gallery-item { margin: 0 auto; }
+
+.rl-gallery-container .rl-gallery-item .rl-gallery-item-content a img { margin: 0 auto; }
 
 /*# sourceMappingURL=../marilyse-portfolio/sass/maps/style.css.map */
