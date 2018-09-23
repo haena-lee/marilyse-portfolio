@@ -219,35 +219,11 @@ a:hover, a:active { outline: 0; }
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.site-branding h1 { font-family: "Josefin Sans", sans-serif; font-weight: 300; font-size: 28px; line-height: 42px; text-align: center; }
-
 #masthead { position: relative; }
 
 #masthead .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; text-align: center; color: white; text-transform: uppercase; font-size: 14px; }
 
 #masthead .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "Josefin Sans", sans-serif; text-transform: uppercase; color: white; }
-
-.home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
-
-.contact-site-header { background: url("images/contact_dark_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
-
-.contact-site-main { position: absolute; top: 150px; left: 40px; }
-
-.contact-site-main .model-info-container, .contact-site-main .email-me { line-height: 25px; margin-bottom: 50px; font-family: "nanum gothic", monospace; font-weight: 300; color: #c7c7c7; }
-
-.contact-site-main .model-info-container .about, .contact-site-main .email-me .about { font-family: "Josefin Sans", sans-serif; text-transform: uppercase; font-weight: 300; margin-bottom: 10px; }
-
-.contact-site-main .model-info-container .line-break, .contact-site-main .email-me .line-break { display: block; width: 30px; border-top: 2px solid #d8d8d8; margin-bottom: 10px; }
-
-.contact-site-main .model-info-container p, .contact-site-main .email-me p { margin: 0; font-size: 16px; }
-
-.contact-site-main .email-me { font-size: 14px; }
-
-.contact-site-main .email-me a { color: #d8d8d8; padding-bottom: 5px; position: relative; }
-
-.contact-site-main .email-me a:after { margin-top: 5px; content: ''; position: absolute; width: 0; height: 1px; display: block; right: 0; background-color: #c7c7c7; -webkit-transition: width .3s ease; transition: width .3s ease; }
-
-.contact-site-main .email-me a:hover:after { width: 100%; left: 0; background-color: #c7c7c7; }
 
 .main-navigation.toggled ul li a { border-left: 2px solid transparent; }
 
@@ -298,9 +274,7 @@ a { display: block; text-decoration: none; }
 
 .main-navigation.toggled ul { display: block; position: absolute; top: 50px; left: 0px; background-color: trasparent; }
 
-.main-navigation.toggled ul li a { display: block; color: white; margin-bottom: 10px; padding: 0 0 0 20px; }
-
-@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; } }
+.main-navigation.toggled ul li a { display: block; color: white; margin-bottom: 10px; padding: 0 0 0 20px; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
 @media screen and (min-width: 730px) { .site-header { min-height: 100px; }
   .main-navigation .menu-toggle { display: none; }
@@ -309,19 +283,13 @@ a { display: block; text-decoration: none; }
   .main-navigation ul li a:after { content: ''; position: absolute; width: 0; height: 1px; display: block; right: 0; background-color: whitesmoke; -webkit-transition: width .3s ease; transition: width .3s ease; }
   .main-navigation ul li a:hover:after { width: 100%; left: 0; background-color: whitesmoke; }
   .main-navigation ul #menu-item-18 { margin-left: 22px; }
-  .contact-site-main { left: 20%; top: 30%; }
   .site-branding h1 { font-size: 32px; } }
-
-@media screen and (min-width: 998px) { .site-header { min-height: 150px; }
-  .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top scroll; min-height: 250vh; } }
 
 .site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation { margin: 0 0 1.5em; overflow: hidden; }
 
 .comment-navigation .nav-previous, .posts-navigation .nav-previous, .post-navigation .nav-previous { float: left; width: 50%; }
 
 .comment-navigation .nav-next, .posts-navigation .nav-next, .post-navigation .nav-next { float: right; text-align: right; width: 50%; }
-
-.site-info { text-align: center; color: white; }
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -372,6 +340,45 @@ a { display: block; text-decoration: none; }
 .page-content, .entry-content, .entry-summary { margin: 1.5em 0 0; }
 
 .page-links { clear: both; margin: 0 0 1.5em; }
+
+.site-branding h1 { font-family: "Josefin Sans", sans-serif; font-weight: 300; font-size: 28px; line-height: 42px; text-align: center; }
+
+.home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
+
+.contact-site-header { background: url("images/contact_dark_image_adjusted.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
+
+.contact-site-main { position: absolute; top: 150px; left: 40px; padding: 0 30px 30px 0px; border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }
+
+.contact-site-main .model-info-container { margin-bottom: 50px; }
+
+.contact-site-main .model-info-container, .contact-site-main .email-me { line-height: 25px; font-family: "nanum gothic", monospace; font-weight: 300; color: #c7c7c7; }
+
+.contact-site-main .model-info-container .about, .contact-site-main .email-me .about { font-family: "Josefin Sans", sans-serif; text-transform: uppercase; font-weight: 400; margin-bottom: 10px; margin-top: 0; font-size: 21px; }
+
+.contact-site-main .model-info-container .line-break, .contact-site-main .email-me .line-break { display: block; width: 30px; border-top: 1px solid #d8d8d8; margin-bottom: 10px; }
+
+.contact-site-main .model-info-container p, .contact-site-main .email-me p { margin: 0; font-size: 16px; }
+
+.contact-site-main .email-me { font-size: 14px; }
+
+.contact-site-main .email-me a { color: #d8d8d8; padding-bottom: 5px; position: relative; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
+
+.contact-site-main .email-me a:hover { color: #8d8d8d; }
+
+.contact-site-main .email-me a:after { margin-top: 5px; content: ''; position: absolute; width: 0; height: 2px; display: block; right: 0; background-color: #c7c7c7; -webkit-transition: width .3s ease; transition: width .3s ease; }
+
+.contact-site-main .email-me a:hover:after { width: 100%; left: 0; background-color: #c7c7c7; }
+
+.site-info { text-align: center; font-family: "Josefin Sans", sans-serif; font-weight: 300; text-transform: uppercase; font-size: 14px; color: white; }
+
+.scrollup { display: none; position: fixed; right: 5%; bottom: 2%; padding: 5px; }
+
+@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; } }
+
+@media screen and (min-width: 730px) { .contact-site-main { left: 20%; top: 30%; } }
+
+@media screen and (min-width: 998px) { .site-header { min-height: 150px; }
+  .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top scroll; min-height: 250vh; } }
 
 /*--------------------------------------------------------------
 ## Comments

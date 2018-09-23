@@ -14,6 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
+		<a href="#" class="scrollup"><i class="fas fa-angle-up fa-2x"></i></a>
 		<div class="site-info">
 			<p>&copy; 2018 | Marilyse Gasse
 		</div><!-- .site-info -->

@@ -20,3 +20,141 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.site-branding h1 {
+	font-family: $font__main;
+	font-weight: 300;
+	font-size: 28px;
+	line-height: 42px;
+	text-align: center;
+}
+
+.home-site-header {
+	background: url('images/1920_2396_home_image.jpg') no-repeat center top fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	background-attachment: fixed;
+}
+
+.contact-site-header {
+	background: url('images/contact_dark_image_adjusted.jpg') no-repeat center top fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	background-attachment: fixed;
+}
+
+
+.contact-site-main {
+	position: absolute;
+	top: 150px;
+	left: 40px;
+	padding: 0 30px 30px 0px;
+	border-right: 1px solid rgb(216, 216, 216);
+	border-bottom: 1px solid rgb(216, 216, 216);
+	// background-color: rgba(116, 116, 116, 0.2);
+	.model-info-container {
+		margin-bottom: 50px;
+	}
+	.model-info-container, .email-me {
+		line-height: 25px;
+		font-family: $font__body;
+		font-weight: 300;
+		color: rgb(199, 199, 199);
+		.about {
+			font-family: $font__main;
+			text-transform: uppercase;
+			font-weight: 400;
+			margin-bottom: 10px;
+			margin-top: 0;
+			font-size: 21px;
+		}
+		.line-break {
+			display: block;
+			width: 30px;
+			border-top: 1px solid rgb(216, 216, 216);
+			margin-bottom: 10px;
+		}
+		p {
+			margin: 0;
+			font-size: 16px;
+		}
+	}
+
+	.email-me {
+		font-size: 14px;
+		a {
+			color: rgb(216, 216, 216);
+			padding-bottom: 5px;
+			position: relative;
+			transition: all 0.3s ease;
+		}
+
+		a:hover {
+			color: rgb(141, 141, 141);
+		}
+
+
+		a:after {
+			margin-top: 5px;
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 2px;
+			display: block;
+			right: 0;
+			background-color: rgb(199, 199, 199);
+			transition: width .3s ease;
+		}
+		a:hover:after {
+			width: 100%;
+			left: 0;
+			background-color: rgb(199, 199, 199);
+		}
+	}
+}
+
+.site-info {
+	text-align: center;
+	font-family: $font__main;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: $color__text-normal;
+
+}
+
+.scrollup {
+	display: none;
+	position: fixed;
+	right: 5%;
+	bottom: 2%;
+	padding: 5px;
+}
+
+@media screen and (min-width: 450px) {
+	.contact-site-main {
+		position: absolute;
+		top: 30%;
+		left: 40px;
+	}
+}
+
+@media screen and (min-width: 730px) {
+	.contact-site-main {
+		left: 20%;
+		top: 30%;
+	}
+}
+
+@media screen and (min-width: 998px) {
+	.site-header {
+		min-height: 150px;
+	}
+
+	.home-site-header {
+		background: url('images/1920_2396_home_image.jpg') no-repeat center top scroll;
+		min-height: 250vh;
+	}
+}
