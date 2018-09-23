@@ -132,7 +132,7 @@ template { display: none; }
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body, button, input, select, optgroup, textarea { color: #404040; font-family: "semplicitapro", sans-serif; font-size: 16px; font-size: 1rem; line-height: 1.5; }
+body, button, input, select, optgroup, textarea { color: #404040; font-family: "Josefin Sans", sans-serif; font-size: 16px; font-size: 1rem; line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 { clear: both; }
 
@@ -206,11 +206,11 @@ textarea { width: 100%; }
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
-a { color: skyblue; }
+a { color: white; }
 
-a:visited { color: purple; }
+a:visited { color: white; }
 
-a:hover, a:focus, a:active { color: midnightblue; }
+a:hover, a:focus, a:active { color: #b9b9b9; }
 
 a:focus { outline: thin dotted; }
 
@@ -219,37 +219,47 @@ a:hover, a:active { outline: 0; }
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.site-branding h1 { font-family: "semplicitapro", sans-serif; font-weight: 500; font-size: 26px; line-height: 40px; }
+.site-branding h1 { font-family: "Josefin Sans", sans-serif; font-weight: 300; font-size: 28px; line-height: 42px; text-align: center; }
+
+#masthead { position: relative; }
+
+#masthead .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; text-align: center; color: white; text-transform: uppercase; font-size: 14px; }
+
+#masthead .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "Josefin Sans", sans-serif; text-transform: uppercase; color: white; }
 
 .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
 
-.home-site-header .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; text-align: center; color: white; text-transform: uppercase; font-size: 14px; }
-
-.home-site-header .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "semplicitapro", sans-serif; }
-
 .contact-site-header { background: url("images/contact_dark_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
 
-.contact-site-header .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; text-align: center; color: white; text-transform: uppercase; font-size: 14px; }
+.contact-site-main { position: absolute; top: 150px; left: 40px; }
 
-.contact-site-header .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "semplicitapro", sans-serif; text-transform: uppercase; color: white; }
+.contact-site-main .model-info-container, .contact-site-main .email-me { line-height: 25px; margin-bottom: 50px; font-family: "nanum gothic", monospace; font-weight: 300; color: #c7c7c7; }
 
-.contact-site-main { position: absolute; top: 180px; left: 40px; }
+.contact-site-main .model-info-container .about, .contact-site-main .email-me .about { font-family: "Josefin Sans", sans-serif; text-transform: uppercase; font-weight: 300; margin-bottom: 10px; }
 
-.contact-site-main .model-info-container { color: white; line-height: 5px; margin-bottom: 50px; }
+.contact-site-main .model-info-container .line-break, .contact-site-main .email-me .line-break { display: block; width: 30px; border-top: 2px solid #d8d8d8; margin-bottom: 10px; }
 
-.contact-site-main .email-me { color: white; }
+.contact-site-main .model-info-container p, .contact-site-main .email-me p { margin: 0; font-size: 16px; }
+
+.contact-site-main .email-me { font-size: 14px; }
+
+.contact-site-main .email-me a { color: #d8d8d8; padding-bottom: 5px; position: relative; }
+
+.contact-site-main .email-me a:after { margin-top: 5px; content: ''; position: absolute; width: 0; height: 1px; display: block; right: 0; background-color: #c7c7c7; -webkit-transition: width .3s ease; transition: width .3s ease; }
+
+.contact-site-main .email-me a:hover:after { width: 100%; left: 0; background-color: #c7c7c7; }
 
 .main-navigation.toggled ul li a { border-left: 2px solid transparent; }
 
 .main-navigation.toggled ul li a:hover { border-left: 2px solid white; }
 
-.site-header { position: relative; min-height: 120px; }
+.site-header { position: relative; min-height: 70px; }
 
 .site-header .site-branding { width: 100%; display: block; position: absolute; top: 0; margin: auto; color: white; text-align: center; text-transform: uppercase; font-size: 14px; }
 
 .site-header .main-navigation { z-index: 999; position: absolute; top: 25px; }
 
-.main-navigation { clear: both; display: block; float: left; width: 100%; }
+.main-navigation { clear: both; display: block; float: left; width: 100%; font-weight: 300; }
 
 .main-navigation ul { display: none; list-style: none; margin: 0; padding-left: 0; }
 
@@ -266,7 +276,7 @@ a { display: block; text-decoration: none; }
 /* Small menu. */
 .main-navigation .menu-toggle { background-color: transparent; border: none; width: 28px; height: 28px; z-index: 999; position: absolute; top: 0px; left: 20px; cursor: pointer; display: block; color: white; }
 
-.main-navigation .menu-toggle .bar { display: block; position: absolute; left: 0; border-top: 3px solid white; width: 100%; -webkit-transition: 300ms; transition: 300ms; }
+.main-navigation .menu-toggle .bar { display: block; position: absolute; left: 0; border-top: 2px solid white; width: 100%; -webkit-transition: 300ms; transition: 300ms; }
 
 .main-navigation .menu-toggle .bar-top { top: 0; }
 
@@ -290,18 +300,20 @@ a { display: block; text-decoration: none; }
 
 .main-navigation.toggled ul li a { display: block; color: white; margin-bottom: 10px; padding: 0 0 0 20px; }
 
-@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; }
-  .contact-site-main .model-info-container { color: white; line-height: 5px; margin-bottom: 50px; }
-  .contact-site-main .email-me { color: white; } }
+@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; } }
 
-@media screen and (min-width: 730px) { .main-navigation .menu-toggle { display: none; }
+@media screen and (min-width: 730px) { .site-header { min-height: 100px; }
+  .main-navigation .menu-toggle { display: none; }
   .main-navigation ul { -webkit-margin-before: 0; margin-block-start: 0; -webkit-margin-after: 0; margin-block-end: 0; -webkit-padding-start: 0px; padding-inline-start: 0px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 50px auto; max-width: 60%; }
-  .main-navigation ul li a { text-align: center; padding-bottom: 5px; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; color: white; text-transform: uppercase; }
+  .main-navigation ul li a { text-align: center; padding-bottom: 5px; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; color: white; text-transform: uppercase; position: relative; }
+  .main-navigation ul li a:after { content: ''; position: absolute; width: 0; height: 1px; display: block; right: 0; background-color: whitesmoke; -webkit-transition: width .3s ease; transition: width .3s ease; }
+  .main-navigation ul li a:hover:after { width: 100%; left: 0; background-color: whitesmoke; }
   .main-navigation ul #menu-item-18 { margin-left: 22px; }
   .contact-site-main { left: 20%; top: 30%; }
   .site-branding h1 { font-size: 32px; } }
 
-@media screen and (min-width: 998px) { .home-site-header { min-height: 180vh; background-attachment: scroll; } }
+@media screen and (min-width: 998px) { .site-header { min-height: 150px; }
+  .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top scroll; min-height: 250vh; } }
 
 .site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation { margin: 0 0 1.5em; overflow: hidden; }
 

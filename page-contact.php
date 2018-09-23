@@ -76,6 +76,8 @@
 				if(have_rows('model_information')){
 					?>
 					<div class="model-info-container">
+						<h3 class='about'>About</h3>
+						<span class='line-break'>&nbsp;</span>
 						<?php
 						while(have_rows('model_information')){
 							the_row();
@@ -96,7 +98,8 @@
 			}
 			?>
 			<div class="email-me">
-				<?php the_content(); ?>
+				<?php // the_content(); ?>
+				<p>You can contact me at <br> <a href="mailto:marilyse_g@hotmail.com">marilyse_g@hotmail.com</a></p>
 			</div>
 			<?php
 		endwhile; // End of the loop.

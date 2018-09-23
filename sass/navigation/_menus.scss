@@ -1,44 +1,13 @@
 .site-branding h1 {
 	font-family: $font__main;
-	font-weight: 500;
-	font-size: 26px;
-	line-height: 40px;
+	font-weight: 300;
+	font-size: 28px;
+	line-height: 42px;
+	text-align: center;
 }
 
-.home-site-header {
-	background: url('images/1920_2396_home_image.jpg') no-repeat center top fixed;
-	background-size: cover;
+#masthead {
 	position: relative;
-	min-height: 100vh;
-	background-attachment: fixed;
-
-	.site-branding {
-		width: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		margin: auto;
-		text-align: center;
-		color: $color__text-normal;
-		text-transform: uppercase;
-		font-size: 14px;
-	}
-
-	.main-navigation {
-		z-index: 999;
-		position: absolute;
-		top: 25px;
-		font-family: $font__main;
-	}
-}
-
-.contact-site-header {
-	background: url('images/contact_dark_image.jpg') no-repeat center top fixed;
-	background-size: cover;
-	position: relative;
-	min-height: 100vh;
-	background-attachment: fixed;
-
 	.site-branding {
 		width: 100%;
 		display: block;
@@ -61,20 +30,85 @@
 	}
 }
 
+
+.home-site-header {
+	background: url('images/1920_2396_home_image.jpg') no-repeat center top fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	background-attachment: fixed;
+}
+
+.contact-site-header {
+	background: url('images/contact_dark_image.jpg') no-repeat center top fixed;
+	background-size: cover;
+	position: relative;
+	min-height: 100vh;
+	background-attachment: fixed;
+
+}
+
 .contact-site-main {
 	position: absolute;
-	top: 180px;
+	top: 150px;
 	left: 40px;
 
-	.model-info-container {
-		color: $color__text-normal;
-		line-height: 5px;
+	.model-info-container, .email-me {
+		line-height: 25px;
 		margin-bottom: 50px;
+		font-family: $font__testing;
+		font-weight: 300;
+		color: rgb(199, 199, 199);
+
+		.about {
+			font-family: $font__main;
+			text-transform: uppercase;
+			font-weight: 300;
+			margin-bottom: 10px;
+		}
+
+		.line-break {
+			display: block;
+			width: 30px;
+			border-top: 2px solid rgb(216, 216, 216);
+			margin-bottom: 10px;
+		}
+
+		p {
+			margin: 0;
+			font-size: 16px;
+		}
 	}
 
 	.email-me {
-		color: $color__text-normal;
+		font-size: 14px;
+
+		a {
+			color: rgb(216, 216, 216);
+			padding-bottom: 5px;
+			position: relative;
+		}
+
+		a:after {
+			margin-top: 5px;
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 1px;
+			display: block;
+			right: 0;
+			background-color: rgb(199, 199, 199);
+			transition: width .3s ease;
+		}
+
+		a:hover:after {
+			width: 100%;
+			left: 0;
+			background-color: rgb(199, 199, 199);
+		}
+
 	}
+
 }
 
 .main-navigation.toggled ul li a {
@@ -88,7 +122,7 @@
 
 .site-header {
 	position: relative;
-	min-height: 120px;
+	min-height: 70px;
 	
 	.site-branding {
 		width: 100%;
@@ -115,6 +149,7 @@
 	display: block;
 	float: left;
 	width: 100%;
+	font-weight: 300;
 
 	ul {
 		display: none;
@@ -188,7 +223,7 @@
         display: block;
         position: absolute;
         left: 0;
-        border-top: 3px solid white;
+        border-top: 2px solid white;
         width: 100%;
         transition: 300ms;   
     }
@@ -254,20 +289,17 @@
 		position: absolute;
 		top: 30%;
 		left: 40px;
-	
-		.model-info-container {
-			color: $color__text-normal;
-			line-height: 5px;
-			margin-bottom: 50px;
-		}
-	
-		.email-me {
-			color: $color__text-normal;
-		}
 	}
+
+
+
 }
 
 @media screen and (min-width: 730px) {
+	.site-header {
+		min-height: 100px;
+	}
+
 	.main-navigation .menu-toggle {
 		display: none;
 	}
@@ -288,7 +320,26 @@
 			flex: 1;
 			color: $color__text-normal;
 			text-transform: uppercase;
+			position: relative;
 		}
+
+		li a:after {
+			content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            display: block;
+			right: 0;
+            background-color: whitesmoke;
+            transition: width .3s ease;
+		}
+
+        li a:hover:after {
+            width: 100%;
+            left: 0;
+            background-color: whitesmoke;
+        }
+
 
 		#menu-item-18 {
 			margin-left: 22px;
@@ -306,9 +357,14 @@
 }
 
 @media screen and (min-width: 998px) {
+
+	.site-header {
+		min-height: 150px;
+	}
+
 	.home-site-header {
-		min-height: 180vh;
-		background-attachment: scroll;
+		background: url('images/1920_2396_home_image.jpg') no-repeat center top scroll;
+		min-height: 250vh;
 	}
 }
 
