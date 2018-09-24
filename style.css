@@ -375,10 +375,11 @@ a { display: block; text-decoration: none; }
 
 @media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; } }
 
-@media screen and (min-width: 730px) { .contact-site-main { left: 20%; top: 30%; } }
+@media screen and (min-width: 730px) { .contact-site-main { left: 20%; top: 30%; }
+  .contact-site-header { background: url("images/contact_dark_image_adjusted.jpg") no-repeat center top fixed; min-height: 220vh; background-attachment: scroll; } }
 
 @media screen and (min-width: 998px) { .site-header { min-height: 150px; }
-  .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top scroll; min-height: 250vh; } }
+  .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top scroll; min-height: 300vh; } }
 
 /*--------------------------------------------------------------
 ## Comments

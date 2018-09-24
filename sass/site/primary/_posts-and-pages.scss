@@ -122,7 +122,6 @@
 	text-transform: uppercase;
 	font-size: 14px;
 	color: $color__text-normal;
-
 }
 
 .scrollup {
@@ -146,6 +145,13 @@
 		left: 20%;
 		top: 30%;
 	}
+
+	.contact-site-header {
+		background: url('images/contact_dark_image_adjusted.jpg') no-repeat center top fixed;
+		min-height: 220vh;
+		background-attachment: scroll;
+	}
+
 }
 
 @media screen and (min-width: 998px) {
@@ -155,6 +161,6 @@
 
 	.home-site-header {
 		background: url('images/1920_2396_home_image.jpg') no-repeat center top scroll;
-		min-height: 250vh;
+		min-height: 300vh;
 	}
 }
