@@ -21,12 +21,18 @@
 	margin: 0 0 1.5em;
 }
 
-.site-branding h1 {
+.site-branding h1 a {
+	color: white;
+	text-decoration: none;
 	font-family: $font__main;
 	font-weight: 300;
 	font-size: 28px;
 	line-height: 42px;
 	text-align: center;
+}
+
+.site-branding a:hover {
+	color: rgb(194, 194, 194);
 }
 
 .home-site-header {

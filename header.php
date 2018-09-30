@@ -26,7 +26,7 @@
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
-		<h1 class="logo-text">Marilyse</h1>
+		<h1 class="logo-text"><a href="www.marilysegasse.com">Marilyse</a></h1>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
