@@ -23,7 +23,6 @@
 
 .site-branding h1 a {
 	color: white;
-	text-decoration: none;
 	font-family: $font__main;
 	font-weight: 300;
 	font-size: 28px;
@@ -54,12 +53,10 @@
 
 .contact-site-main {
 	position: absolute;
-	top: 150px;
+	top: 220px;
 	left: 40px;
 	padding: 0 30px 30px 0px;
-	border-right: 1px solid rgb(216, 216, 216);
-	border-bottom: 1px solid rgb(216, 216, 216);
-	// background-color: rgba(116, 116, 116, 0.2);
+
 	.model-info-container {
 		margin-bottom: 50px;
 	}
@@ -74,7 +71,7 @@
 			font-weight: 400;
 			margin-bottom: 10px;
 			margin-top: 0;
-			font-size: 21px;
+			font-size: 18px;
 		}
 		.line-break {
 			display: block;
@@ -84,7 +81,7 @@
 		}
 		p {
 			margin: 0;
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 
@@ -141,8 +138,10 @@
 @media screen and (min-width: 450px) {
 	.contact-site-main {
 		position: absolute;
-		top: 30%;
+		top: 230px;
 		left: 40px;
+		border-right: 1px solid rgb(216, 216, 216);
+		border-bottom: 1px solid rgb(216, 216, 216);
 	}
 }
 
