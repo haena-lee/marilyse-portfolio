@@ -99,7 +99,8 @@
 			?>
 			<div class="email-me">
 				<?php // the_content(); ?>
-				<p>You can contact me at <br> <a href="mailto:gasse.marilyse@gmail.com">gasse.marilyse@gmail.com</a></p>
+				<p>You can contact me at <br> <a class="email" href="mailto:gasse.marilyse@gmail.com">gasse.marilyse@gmail.com</a></p>
+				<p><a class="instagram" href="https://www.instagram.com/marilyseg/">Find me on Instagram</a></p>
 			</div>
 			<?php
 		endwhile; // End of the loop.

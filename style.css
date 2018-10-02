@@ -1,5 +1,5 @@
 /*!
-Theme Name: haenalee
+Theme Name: marilyse-portfolio
 Theme URI: http://underscores.me/
 Author: Haena Lee
 Author URI: http://haena.ca
@@ -7,7 +7,7 @@ Description: Portfolio project for Haena Lee
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Text Domain: haenalee
+Text Domain: marilyse-portfolio
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
@@ -225,7 +225,7 @@ a:hover, a:active { outline: 0; }
 
 #masthead .main-navigation { z-index: 999; position: absolute; top: 25px; font-family: "Josefin Sans", sans-serif; text-transform: uppercase; color: white; }
 
-.main-navigation.toggled ul li a { border-left: 2px solid transparent; }
+.main-navigation.toggled ul li a { font-size: 13px; border-left: 2px solid transparent; }
 
 .main-navigation.toggled ul li a:hover { border-left: 2px solid white; }
 
@@ -341,39 +341,39 @@ a { display: block; text-decoration: none; }
 
 .page-links { clear: both; margin: 0 0 1.5em; }
 
-.site-branding h1 { font-family: "Josefin Sans", sans-serif; font-weight: 300; font-size: 28px; line-height: 42px; text-align: center; }
+.site-branding h1 a { color: white; font-family: "Josefin Sans", sans-serif; font-weight: 300; font-size: 28px; line-height: 42px; text-align: center; }
+
+.site-branding a:hover { color: #c2c2c2; }
 
 .home-site-header { background: url("images/1920_2396_home_image.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
 
 .contact-site-header { background: url("images/contact_dark_image_adjusted.jpg") no-repeat center top fixed; background-size: cover; position: relative; min-height: 100vh; background-attachment: fixed; }
 
-.contact-site-main { position: absolute; top: 150px; left: 40px; padding: 0 30px 30px 0px; border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; }
+.contact-site-main { position: absolute; top: 200px; left: 40px; padding: 0 30px 30px 0px; }
 
 .contact-site-main .model-info-container { margin-bottom: 50px; }
 
 .contact-site-main .model-info-container, .contact-site-main .email-me { line-height: 25px; font-family: "nanum gothic", monospace; font-weight: 300; color: #c7c7c7; }
 
-.contact-site-main .model-info-container .about, .contact-site-main .email-me .about { font-family: "Josefin Sans", sans-serif; text-transform: uppercase; font-weight: 400; margin-bottom: 10px; margin-top: 0; font-size: 21px; }
+.contact-site-main .model-info-container .about, .contact-site-main .email-me .about { font-family: "Josefin Sans", sans-serif; text-transform: uppercase; font-weight: 400; margin-bottom: 10px; margin-top: 0; font-size: 18px; }
 
 .contact-site-main .model-info-container .line-break, .contact-site-main .email-me .line-break { display: block; width: 30px; border-top: 1px solid #d8d8d8; margin-bottom: 10px; }
 
-.contact-site-main .model-info-container p, .contact-site-main .email-me p { margin: 0; font-size: 16px; }
+.contact-site-main .model-info-container p, .contact-site-main .email-me p { margin: 0; font-size: 14px; }
 
-.contact-site-main .email-me { font-size: 14px; }
+.contact-site-main .email-me { font-size: 16px; line-height: 1.5; }
 
-.contact-site-main .email-me a { color: #d8d8d8; padding-bottom: 5px; position: relative; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
+.contact-site-main .email-me p { padding-bottom: 5px; }
+
+.contact-site-main .email-me a { font-family: "nanum gothic", monospace; font-size: 14px; color: #d8d8d8; padding-bottom: 5px; position: relative; -webkit-transition: all 0.3s ease; transition: all 0.3s ease; }
 
 .contact-site-main .email-me a:hover { color: #8d8d8d; }
-
-.contact-site-main .email-me a:after { margin-top: 5px; content: ''; position: absolute; width: 0; height: 2px; display: block; right: 0; background-color: #c7c7c7; -webkit-transition: width .3s ease; transition: width .3s ease; }
-
-.contact-site-main .email-me a:hover:after { width: 100%; left: 0; background-color: #c7c7c7; }
 
 .site-info { text-align: center; font-family: "Josefin Sans", sans-serif; font-weight: 300; text-transform: uppercase; font-size: 14px; color: white; }
 
 .scrollup { display: none; position: fixed; right: 5%; bottom: 2%; padding: 5px; }
 
-@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 30%; left: 40px; } }
+@media screen and (min-width: 450px) { .contact-site-main { position: absolute; top: 230px; left: 40px; border-right: 1px solid #d8d8d8; border-bottom: 1px solid #d8d8d8; } }
 
 @media screen and (min-width: 730px) { .contact-site-main { left: 20%; top: 30%; }
   .contact-site-header { background: url("images/contact_dark_image_adjusted.jpg") no-repeat center top fixed; min-height: 1300px; background-attachment: scroll; } }
