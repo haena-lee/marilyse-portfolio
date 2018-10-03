@@ -21,7 +21,7 @@
 	margin: 0 0 1.5em;
 }
 
-.site-branding h1 a {
+.site-branding h1 {
 	color: white;
 	font-family: $font__main;
 	font-weight: 300;
@@ -40,6 +40,10 @@
 	position: relative;
 	min-height: 100vh;
 	background-attachment: fixed;
+	
+	.site-branding h1 {
+		font-weight: 300;
+	}
 }
 
 .contact-site-header {
@@ -48,6 +52,10 @@
 	position: relative;
 	min-height: 100vh;
 	background-attachment: fixed;
+
+	.logo-text {
+		font-weight: 300;
+	}
 }
 
 
