@@ -26,15 +26,20 @@
 	font-family: $font__main;
 	font-weight: 300;
 	font-size: 28px;
-	line-height: 42px;
+	line-height: 52px;
 	text-align: center;
+	display: inline-block;
 }
 
 .site-branding a:hover {
 	color: rgb(194, 194, 194);
 }
 
-.home-site-header {
+.site-title {
+	z-index: 9999;
+}
+
+.home-site-background {
 	background: url('images/1920_2396_home_image.jpg') no-repeat center top fixed;
 	background-size: cover;
 	position: relative;
@@ -46,7 +51,7 @@
 	}
 }
 
-.contact-site-header {
+.contact-site-background {
 	background: url('images/contact_dark_image_adjusted.jpg') no-repeat center top fixed;
 	background-size: cover;
 	position: relative;
@@ -160,7 +165,7 @@
 		min-height: 150px;
 	}
 
-	.home-site-header {
+	.home-site-background {
 		background: url('images/1920_2396_home_image.jpg') no-repeat center top scroll;
 		min-height: 2300px;
 		background-attachment: scroll;

@@ -12,18 +12,6 @@
  * @package marilyse-portfolio
  */
 ?>
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package marilyse-portfolio
- */
-
-?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -38,9 +26,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marilyse-portfolio' ); ?></a>
 
-	<header id="masthead" class="home-site-header">
+	<header id="masthead" class="site-header home-site-background">
 		<div class="site-branding">
-		<h1 class="logo-text">Marilyse</h1>
+		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -61,19 +49,14 @@
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
-
-
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main">
-			<?php // marilyse_portfolio_post_thumbnail(); ?>
+			<?php //marilyse_portfolio_post_thumbnail(); ?>
 			<?php
 			while ( have_posts() ) :
 				the_post();
 
-				// get_template_part( 'template-parts/content', 'page' );
-				
-
-
+				//get_template_part( 'template-parts/content', 'home' );
 			endwhile; // End of the loop.
 			?>
 
