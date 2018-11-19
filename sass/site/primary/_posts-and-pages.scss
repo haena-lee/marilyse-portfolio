@@ -66,8 +66,8 @@
 
 .contact-site-main {
 	position: absolute;
-	top: 200px;
-	left: 40px;
+	top: 220px;
+	left: 80px;
 	padding: 0 30px 30px 0px;
 
 	.model-info-container {
@@ -81,19 +81,22 @@
 		.about {
 			font-family: $font__main;
 			text-transform: uppercase;
-			font-weight: 400;
+			font-weight: 600;
 			margin-bottom: 10px;
 			margin-top: 0;
-			font-size: 18px;
+			font-size: 16px;
+			color: rgb(182, 182, 182);
 		}
 		.line-break {
 			display: block;
 			width: 30px;
-			border-top: 1px solid rgb(216, 216, 216);
+			border-top: 1px solid rgb(182, 182, 182);
 			margin-bottom: 10px;
 		}
 		p {
 			margin: 0;
+			text-transform: uppercase;
+			font-weight: 600;
 			font-size: 14px;
 		}
 	}
@@ -115,6 +118,10 @@
 
 		a:hover {
 			color: rgb(141, 141, 141);
+		}
+
+		.instagram {
+			margin-top: 25px;
 		}
 	}
 }
@@ -150,19 +157,28 @@
 	.contact-site-main {
 		left: 20%;
 		top: 30%;
+		.model-info-container {
+			.about {
+				font-size: 21px;
+			}
+		}
 	}
 
-	.contact-site-header {
+	.contact-site-background {
 		background: url('images/contact_dark_image_adjusted.jpg') no-repeat center top fixed;
 		min-height: 1300px;
 		background-attachment: scroll;
+	}
+
+	.site-branding h1 {
+		font-size: 34px;
 	}
 
 }
 
 @media screen and (min-width: 998px) {
 	.site-header {
-		min-height: 150px;
+		// min-height: 150px;
 	}
 
 	.home-site-background {

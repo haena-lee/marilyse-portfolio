@@ -38,9 +38,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'marilyse-portfolio' ); ?></a>
 
-	<header id="masthead" class="contact-site-header">
+	<header id="masthead" class="site-header contact-site-background">
 		<div class="site-branding">
-		<h1 class="logo-text">Marilyse</h1>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -100,7 +100,7 @@
 			<div class="email-me">
 				<?php // the_content(); ?>
 				<p>You can contact me at <br> <a class="email" href="mailto:gasse.marilyse@gmail.com">gasse.marilyse@gmail.com</a></p>
-				<p class="instagram"><a class="instagram" href="https://www.instagram.com/marilyseg/" target="_blank"><i class="fab fa-instagram fa-2x"></i> @marilyseg</a></p>
+				<p class="instagram"><a class="instagram" href="https://www.instagram.com/marilyseg/" target="_blank"><i class="fab fa-instagram fa-lg"></i> @marilyseg</a></p>
 			</div>
 			<?php
 		endwhile; // End of the loop.
